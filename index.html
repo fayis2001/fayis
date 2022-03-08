@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Fayis</title>
+        <link rel='icon' href="/assets/img/fays.jpg">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                  
+                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Fayis</span><br></h1>
+
+                    <a href="https://api.whatsapp.com/send/?phone=%2B919544969372&text&app_absent=0" class="button">Contact</a>
+                </div>
+
+               
+
+                
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title"> About  </h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/fays pro.jpg" alt="fayis">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'm Fayis!</h2>
+                        <p class="about__text">
+                        Vice president SFI Mannarkkad Area Committee<br>
+                        DYFI Meghala Secrateriate member <br>
+                        Former SFI unit seceretry at MES Kalladi College Mannarkkad<br>
+                               
+                        </p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+        
+
+            <!--===== WORK =====-->
+        
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form id="submit-form"  action=""  class="contact__form">
+                        <input type="text" placeholder="Name" name="name"  class="contact__input">
+                        <input type="mail" placeholder="Email" name="mail" class="contact__input">  
+                        <textarea  id="" cols="0" rows="10" name="feedBack" class="contact__input"></textarea>
+                        <input type="submit" value="Submit" class="contact__button button">
+                    </form>
+                    <script>
+                        $("#submit-form").submit((e) => {
+                            e.preventDefault()
+                            $.ajax({
+                                url: "https://script.google.com/macros/s/AKfycbyH2cg_5wx_RndOOw-Q2tYKotF7q2nG83-sOPbC_n9EIHOuGuE69-jn-MO3DsMPuTTyew/exec",
+                                data: $("#submit-form").serialize(),
+                                method: "post",
+                                success: function (response) {
+                                    alert("Form submitted successfully")
+                                    window.location.reload()
+                                    //window.location.href="https://google.com"
+                                },
+                                error: function (err) {
+                                    alert("Something Error")
+
+                                }
+                            })
+                        })
+                    </script>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Fayis</p>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/fayiz.mohd.507" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.instagram.com/fayze___/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://twitter.com/JKalappatt" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+            </div>
+           
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+       
+    </body>
+</html>
